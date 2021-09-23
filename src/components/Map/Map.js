@@ -35,7 +35,13 @@ const Map = () =>{
                     position={{ lat: parseFloat(user.address.geo.lat) ,lng: parseFloat(user.address.geo.lng)}}
                     onClick={()=>
                         ctx.changeUserdetails(user.name,user.id)
-                    }></Marker>)
+                    }
+                    icon={{
+                        url:'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-1024.png',
+                        scaledSize: new window.google.maps.Size(35,35)
+                    }}
+                    ></Marker>)
+                    
             }
         </GoogleMap>
 
